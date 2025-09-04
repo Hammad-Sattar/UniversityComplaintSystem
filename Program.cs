@@ -15,7 +15,7 @@ builder.Services.AddDbContext<ComplainsDbContext>(o =>
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 builder.Services.AddScoped<IComplaintRepository, ComplaintRepository>();
-//builder.Services.AddScoped<IActionRepository, ActionRepository>();
+builder.Services.AddScoped<IComplaintActionRepository,ComplaintActionRepository>();
 builder.Services.AddAutoMapper(typeof(Program));
 
 

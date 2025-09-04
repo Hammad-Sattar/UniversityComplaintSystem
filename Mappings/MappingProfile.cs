@@ -32,6 +32,12 @@ namespace ComplaintSystem.Mappings
             CreateMap<ComplaintDto, Complaint>();
 
 
+            // ComplaintAction mappings
+            CreateMap<ComplaintAction, ComplaintActionDto>()
+           .ForMember(dest => dest.ActionByUser, opt => opt.MapFrom(src => src.ActionByUser.Name));
+
+            CreateMap<CreateComplaintActionDto, ComplaintAction>();
+
 
             }
         }
